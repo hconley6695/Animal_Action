@@ -1,0 +1,40 @@
+/* CSS Entry Point */
+body {
+	margin: 0;
+
+}
+
+ .stage {
+	height: 1000px;
+	width: 1000px;
+ 	display: flex;
+ 	position: relative;
+  }
+
+
+.pick_the_name {
+	font-family: fantasy;
+	font-size: 36px;
+	color: black;
+	position: absolute;
+	top: 10%;
+	left: 20%;	
+	}
+
+button {
+	height: 80px;
+	width: 140px;
+	justify-content: flex-end;
+
+
+}
+li	{
+	list-style-type: none;
+}
+li button {
+	font-family: 'Fredoka One', cursive;
+	font-size: 50px;
+
+
+}
+
