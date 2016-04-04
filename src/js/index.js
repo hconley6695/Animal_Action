@@ -8,20 +8,64 @@ import questions from './questionArray';
 	// console.log(imageOne);
 
 class Question {
-	constructor (question) {
-		// this.question = question;
-		this.image = question.image;
-		// this.choices = questions.choices_for_answer;
-		// this.label = choices.label;
-		// this.correct = choices.rightOrWrong;
+	constructor (image, choice1, choice2, choice3, choice4, correct) {
+		this.image = image;
+		this.choice1 = choice1;
+		this.choice2 = choice2;
+		this.choice3 = choice3;
+		this.choice4 = choice4;
+		this.correct = correct;
 	}
-	eachQuestion(qParam) {
-
-		var animalImage = this.image;
-		('.question_stage').append(`<img src=${animalImage}>`);
+}
 
 
-		//var imageOne = questionParam.questions[0].image;
+var turtle = new Question('http://icons.iconarchive.com/icons/fixicon/farm/256/turtle-icon.png', 'F', 'L', 'R', 'T', 'T');
+	
+
+
+function  firstQ(qParam) {
+	var animalImage = qParam.image;
+	return `<img src=${animalImage}>`;
+}
+
+
+$('.question_stage').html(firstQ(turtle));
+
+function button1(q1) {
+	var letter1 = q1.choice1;
+	return `<li> <button> ${letter1} </button> </li>`;
+}
+
+$('.question_stage').append(button1(turtle));
+
+function button2(q2) {
+	var letter2 = q2.choice2;
+	return `<li> <button> ${letter2} </button> </li>`;
+}
+
+$('.question_stage').append(button2(turtle));
+
+function button3(q3) {
+	var letter3 = q3.choice3;
+	return `<li> <button> ${letter3} </button> </li>`;
+}
+
+$('.question_stage').append(button3(turtle));
+
+function button4(q4) {
+	var letter4 = q4.choice4;
+	return `<li> <button> ${letter4} </button> </li>`;
+}
+
+$('.question_stage').append(button4(turtle));
+
+function correctAns(answer) {
+
+
+}
+
+
+	//$('.question_stage').append();		
 
 		// var labelArray = this.choices.map(function(choice)	{
 		// 	return choice.label;
@@ -33,20 +77,3 @@ class Question {
 
 		// })
 
-	}
-
-
-}
-
-console.log(questions);
-
-var createQ = function(data){
-	var thingy = new Question(data);
-};
-
-var questArray = _.forEach(questions, createQ);
-console.log(questArray);
-
-// var qs = new Question (questions);
-
-// console.log(qs);
