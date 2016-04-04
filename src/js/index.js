@@ -59,21 +59,15 @@ function button4(q4) {
 
 $('.question_stage').append(button4(turtle));
 
-function correctAns(answer) {
+$('.question_stage').on('click', function correctAns(guess) {
+	var answer = guess.choice4;
+	console.log(answer);
 
+	if ( answer === 'T') {
+		alert('Great job!');
+	} else {
+		alert('Wrong answer!  Try again.');
+	}
+});
 
-}
-
-
-	//$('.question_stage').append();		
-
-		// var labelArray = this.choices.map(function(choice)	{
-		// 	return choice.label;
-
-		// })
-
-		// var buttons = labelArray.forEach(function(label) {
-		// 	$('.question_stage').append(`<li> <button> ${label}</button></li>`);
-
-		// })
-
+// correctAns(turtle)
