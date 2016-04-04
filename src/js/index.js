@@ -59,9 +59,10 @@ function button4(q4) {
 
 $('.question_stage').append(button4(turtle));
 
-$('.question_stage').on('click', function correctAns(guess) {
-	var answer = guess.choice4;
-	console.log(answer);
+
+$('.question_stage').on('click',function correctAns(guess) {
+	var answer = guess.correct;
+	//console.log(answer);
 
 	if ( answer === 'T') {
 		alert('Great job!');
@@ -69,5 +70,13 @@ $('.question_stage').on('click', function correctAns(guess) {
 		alert('Wrong answer!  Try again.');
 	}
 });
+
+
+
+
+
+
+
+
 
 // correctAns(turtle)
