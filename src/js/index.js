@@ -38,6 +38,7 @@ function stage(qParam) {
 	var letter2 = qParam.choice2;
 	var letter3 = qParam.choice3;
 	var letter4 = qParam.choice4;
+	var correct = qParam.correct;
 
 
 	return `
@@ -45,10 +46,10 @@ function stage(qParam) {
 
 	 	<img src=${animalImage} width='300' class='animal-image'>
 	  		<ul class='buttons'>
-				<li> <button> ${letter} </button> </li>
-		 		<li> <button> ${letter2} </button> </li>
-		 		<li> <button> ${letter3} </button> </li>
-		 		<li> <button> ${letter4} </button> </li>
+				<li> <button class=${letter===correct}> ${letter} </button> </li>
+		 		<li> <button class=${letter2===correct}> ${letter2} </button> </li>
+		 		<li> <button class=${letter3===correct}> ${letter3} </button> </li>
+		 		<li> <button class=${letter4===correct}> ${letter4} </button> </li>
 	  		</ul>	
 	</div>`
 }
@@ -64,20 +65,21 @@ $('.question_stage').append(stage(turtle));
 var buttonList = document.querySelector('.buttons');
 buttonList.addEventListener('click', function(event) {
 
-	var letter = event.target.textContent;
-	// var correct = letter;
-
-	console.log(letter);
+	// var letter = event.target.textContent;
+	var correctBtn = event.target.className;
 
 
+	console.log(correctBtn);
 
- if ( letter === 'T') {
-		alert('Great Job!')
-		console.log(letter);
+
+ if  (correctBtn === 'false') {
+		alert('Try again!')
+
 	} else {
-		alert('Try again')
-		console.log(letter);
+		alert('Great Job!')
+
 	}
+
 
 })
 
@@ -103,22 +105,4 @@ buttonList.addEventListener('click', function(event) {
 // $('.question_stage').append(stage(turtle));
 
 
-
-
-
-
-
-
-
-/////////////////////////////////////
-// $('.question_stage').on('click',function correctAns(guess) {
-// 	var answer = guess.correct;
-// 	//console.log(answer);
-
-// 	if ( answer === 'T') {
-// 		alert('Great job!');
-// 	} else {
-// 		alert('Wrong answer!  Try again.');
-// 	}
-// });
 
