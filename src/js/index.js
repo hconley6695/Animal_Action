@@ -30,20 +30,33 @@ var monkey = new Animal ('http://vignette2.wikia.nocookie.net/headsoccer/images/
 var kangaroo = new Animal ('http://www.clipartonline.net/_/rsrc/1434566857092/Kangaroo-Cartoon-Images/kangaroo-with-joey%201.png?height=320&width=320', 'K', 'R', 'Y', 'O', 'K');
 var cat = new Animal ('http://cat-pictures.clipartonline.net/_/rsrc/1359117771956/cute-kittens-images-page-2/cat-image%2010.png?height=320&width=320', 'B', 'U', 'C', 'G', 'C');
 
+var animals = [
+	turtle, elephant, zebra, lion, snake, monkey, kangaroo, cat
+]
+
+function nextAnimal() {
+
+	if (animals.length) {
+	var animal = animals.shift();
+	$('.question_stage').append(stage(animal));
+	
+	} else {
+
+		alert('Congratulations!  You won the game!')
+	}
+
+}
+
 function stage(qParam) {
 	var animalImage = qParam.image;
-
-
 	var letter =qParam.choice;
 	var letter2 = qParam.choice2;
 	var letter3 = qParam.choice3;
 	var letter4 = qParam.choice4;
 	var correct = qParam.correct;
 
-
 	return `
 	<div class='scene'>
-
 	 	<img src=${animalImage} width='300' class='animal-image'>
 	  		<ul class='buttons'>
 				<li> <button class=${letter===correct}> ${letter} </button> </li>
@@ -55,54 +68,32 @@ function stage(qParam) {
 }
 
 
-	
-$('.question_stage').append(stage(turtle));
-// $('.question_stage').append(stage(elephant));
+
+nextAnimal();
 
 
+$('body').on('click', 'button', function(event) {
 
-
-var buttonList = document.querySelector('.buttons');
-buttonList.addEventListener('click', function(event) {
-
-	// var letter = event.target.textContent;
 	var correctBtn = event.target.className;
-
-
 	console.log(correctBtn);
+	 if  (correctBtn === 'false') {
+			alert('Try again!')
+		} else {
+			alert('Great Job!')
+			$('.scene').hide();
+			nextAnimal();
 
+		}
 
- if  (correctBtn === 'false') {
-		alert('Try again!')
-
-	} else {
-		alert('Great Job!')
-
-	}
 
 
 })
 
 
-// $('.question_stage').append(stage(zebra));
-// $('.question_stage').append(stage(lion));
-// $('.question_stage').append(stage(snake));
-// $('.question_stage').append(stage(monkey));
-// $('.question_stage').append(stage(kangaroo));
-// $('.question_stage').append(stage(cat));
 
 
 
 
-
-// var turtle = new Question(animals[0]);
-// console.log(animalArray);
-// var animalQuestions = new Question([animals]);
-// console.log(animalQuestions);
-// var turtle = new Question('http://icons.iconarchive.com/icons/fixicon/farm/256/turtle-icon.png', 'F', 'L', 'R', 'T', 'T');
-
-
-// $('.question_stage').append(stage(turtle));
 
 
 

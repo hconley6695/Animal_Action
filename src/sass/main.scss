@@ -1,7 +1,7 @@
 /* CSS Entry Point */
 body {
 	margin: 0;
-	background-color: black;
+	// background-color: black;
 	overflow: hidden;
 }
 
@@ -10,8 +10,11 @@ body {
 .each-question {
  	display: flex;
  	position: relative;
- 	border: 1px solid red;
+ 	// border: 1px solid red;
  	width: 1300px;
+ 	&.hide {
+ 		opacity: 0;
+ 	}
 	.backgrd-img {
 		margin-right: auto;
 		margin-left: auto;
@@ -56,10 +59,6 @@ body {
 
 	}
 }
-
-
-
-
 
 
 
