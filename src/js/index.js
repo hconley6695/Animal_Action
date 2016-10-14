@@ -82,11 +82,7 @@ $('body').on('click', 'button', function(event) {
 			alert('Great Job!')
 			$('.scene').hide();
 			nextAnimal();
-
 		}
-
-
-
 })
 
 
