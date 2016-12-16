@@ -52,7 +52,9 @@ function stage(qParam) {
 
 	return `
 	<div class='scene'>
-	 	<img src=${animalImage} width='300' class='animal-image'>
+		<div class="img-div">
+	 		<img src=${animalImage} width='300' class='animal-image'>
+	  	</div>	
 	  		<ul class='buttons'>
 				<li> <button class=${letter===correct}> ${letter} </button> </li>
 		 		<li> <button class=${letter2===correct}> ${letter2} </button> </li>
