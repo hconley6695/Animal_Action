@@ -31,7 +31,7 @@ body {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
-		width: 300px;
+		// width: 300px;
 
 	}
 }
@@ -131,63 +131,43 @@ button {
 
 }
 
-// @media screen and (min-width: 700px) {
-// .each-question {
-//  	display: flex;
-//  	position: relative;
-//  	// border: 1px solid red;
-//  	width: 1300px;
-//  	margin-right: auto;
-//  	margin-left: auto;
-//  	&.hide {
-//  		opacity: 0;
-//  	}
-// 	.backgrd-img {
-// 		margin-right: auto;
-// 		margin-left: auto;
-// 	}
-// 	.pick_the_name {
-// 		font-family: "Lucida Sans", sans-serif;
-// 		font-size: 36px;
-// 		color: black;
-// 		position: absolute;
-// 		top: 10%;
-// 		left: 20%;	
-// 	}
-// 	button {
-// 		height: 100px;
-// 		width: 160px;
-// 		justify-content: flex-end;
-// 		border-radius: 7px;
-// 		background-color: #ffffff;
-// 		border: 2px solid black;
-// 		&:hover {
-// 			background-color: #ffff00;
-// 		}
-// 	}
-// 	li	{
-// 		list-style-type: none;
-// 		padding-bottom: 20px;
-// 	}
-// 	li button {
-// 		font-family: "Lucida Sans", sans-serif;
-// 		font-size: 50px;
-// 	}
-// 	.animal-image {
-// 		position: absolute;
-// 		top: 35%;
-// 		left: 30%;
-// 	}
-// 	ul.buttons {
-// 		display: inline-block;
-// 		position: absolute;
-// 		top: 130px;
-// 		right: 150px;
+@media screen and (min-width: 901px) {
+	.stage {
+		width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-// 	}
-// }
-// }
+	.pick_the_name {
+		font-size: 34px;
+		text-align: center;
+	}
 
+	.img-div {
+		width: 100%;
+		.animal-image {
+			width: 250px;
+		}
+	}
 
+	ul.buttons {
+		margin-top: 20px;
+		position: relative;
+		padding-left: 0;
+	}
 
+	li {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	li button {
+		font-size: 40px;
+	}
+
+	button {
+		height: 70px;
+		width: 112px;		
+	}
+}
 
