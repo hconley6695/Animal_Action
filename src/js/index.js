@@ -1,11 +1,6 @@
 // Javascript Entry Point
 import $ from 'jquery';
-import _ from 'lodash';
-//import animals from './questionArray';
-	
-	// var imageOne = question.image; 
-	// console.log(imageOne);
-// () 
+// import _ from 'lodash';
 
 class Animal {
 
@@ -68,10 +63,6 @@ function stage(qParam) {
 }
 
 
-
-nextAnimal();
-
-
 $('body').on('click', 'button', function(event) {
 
 	var correctBtn = event.target.className;
@@ -85,7 +76,7 @@ $('body').on('click', 'button', function(event) {
 		}
 })
 
-
+nextAnimal();
 
 
 
