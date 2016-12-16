@@ -3,14 +3,80 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	// background-color: black;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
-.app {
+.stage {
+	position: relative;
+}
+
+.stage:before {
+	content: " ";
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: -1;
+
+	display: block;
 	background-image: url('/images/cartoon-hills-hi2.jpg');
 	background-size: cover;
+	width: 100%;
+	height: 100%;
 }
 
+@media screen and (max-width: 400px) {
+
+	.pick_the_name {
+		font-size: 24px;
+		text-align: center;
+	}
+
+	.scene {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.img-div {
+		width: 100%;
+		margin-left: 52px;
+		margin-top: 20px;
+	}
+
+	.animal-image {
+		width: 200px;
+
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-top: 0;
+
+	}
+
+	li {
+		list-style: none;
+		padding: 10px 20px;
+	}
+
+	li button {
+		font-size: 35px;
+	}
+
+	button {
+		height: 50px;
+		width: 80px;
+		justify-content: flex-end;
+		border-radius: 7px;
+		background-color: #ffffff;
+		border: 2px solid black;
+		&:hover {
+			background-color: #ffff00;
+		}
+	}
+}
 
 
 // .each-question {
